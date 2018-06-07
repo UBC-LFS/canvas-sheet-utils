@@ -175,7 +175,7 @@ function testFunct(auth) {
       if (err) console.log(err)
       const rows = data.values
       if (rows.length) {
-        console.log('%d cells updated')
+        console.log('Copied complete! Check at https://docs.google.com/spreadsheets/d/1hWQFrYRV745PYkznCqIPRVtD5z7faapKvkelf7ukkMw/edit#gid=0')
       }
       // do something here
       // console.log(newSheetArr)
