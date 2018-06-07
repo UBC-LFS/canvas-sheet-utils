@@ -166,17 +166,19 @@ function testFunct(auth) {
       return acc
     }, [])
     const newSheetArr = newSheet.map(object => Object.values(object))
-    sheets.spreadsheets.values.get({
-      spreadsheetId: '1Df4TF67exj3_6H9B53sIp5lbRS_3FBt011sGRJ-zVAg',
-      range: 'Instructor Contact!A2:N'
-    }, (err, { data }) => {
+    sheets.spreadsheets.values.update({
+      spreadsheetId: '1hWQFrYRV745PYkznCqIPRVtD5z7faapKvkelf7ukkMw',
+      range: 'Sheet1!A2:E',
+      valueInputOption: 'RAW',
+      resource: {values: newSheetArr}
+    }, (err, result) => {
       if (err) console.log(err)
       const rows = data.values
       if (rows.length) {
-        // rows.forEach((row) => sheet2.push([row[0], row[1], row[2], row[3]]))
+        console.log('%d cells updated')
       }
       // do something here
-      console.log(newSheetArr)
+      // console.log(newSheetArr)
     })
   })
 }
