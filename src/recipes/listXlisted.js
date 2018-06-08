@@ -1,11 +1,6 @@
 const { google } = require('googleapis')
 
-/**
- * Prints the names and majors of students in a sample spreadsheet:
- * @see https://docs.google.com/spreadsheets/d/1Df4TF67exj3_6H9B53sIp5lbRS_3FBt011sGRJ-zVAg/edit#gid=2097143836
- * @param {google.auth.OAuth2} auth The authenticated Google OAuth client.
- */
-function listCourses (auth) {
+function listXlisted (auth) {
   const sheets = google.sheets({ version: 'v4', auth })
   sheets.spreadsheets.values.get({
     spreadsheetId: '1Df4TF67exj3_6H9B53sIp5lbRS_3FBt011sGRJ-zVAg',
@@ -16,7 +11,7 @@ function listCourses (auth) {
     if (rows.length) {
       console.log('Dept, Course, Instructor, Email')
       rows.map((row) => {
-        if ((row[13] !== 'Y') && (row[11] !== 'Y') && (row[10] === 'Lecture')) {
+        if (row[11] === 'Y') {
           console.log(`${row[2]}, ${row[3]}, ${row[5]}, ${row[8]}`)
         }
       })
@@ -26,4 +21,4 @@ function listCourses (auth) {
   })
 }
 
-module.exports = listCourses
+module.exports = listXlisted
