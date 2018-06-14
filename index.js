@@ -3,5 +3,6 @@ const listCourses = require('./src/recipes/listCourses')
 const listCanvasCourseCopies = require('./src/recipes/listCanvasCourseCopies')
 const listXlisted = require('./src/recipes/listXlisted')
 const printToPage = require('./src/recipes/printToPage')
+const listNonEmailResponse = require('./src/recipes/listNonEmailResponse')
 
-editFile(printToPage)
+editFile(listNonEmailResponse)
