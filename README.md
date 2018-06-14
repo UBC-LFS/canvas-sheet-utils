@@ -11,10 +11,10 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Installing and Setup
 
-1. First, clone this repo. `git clone https://github.com/UBC-LFS/canvas-sheet-utils/tree/modularize`
+1. First, clone this repo. `git clone https://github.com/UBC-LFS/canvas-sheet-utils.git`
 2. Then cd into the repo. `cd LFS sheet script`
 3. Run the installation script. `npm install` (If you see `babel-node: command not found`, you've missed this step.)
-4. Follow the steps on this page to enable client_secret.json. https://developers.google.com/sheets/api/quickstart/nodejs
+4. Follow the steps on this page to enable client_secret.json: https://developers.google.com/sheets/api/quickstart/nodejs
 5. Import the scripts from the `src/recipes` folder in `index.js` that you would like to run.
 6. Run using `node index.js`.
 
